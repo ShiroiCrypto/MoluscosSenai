@@ -1,0 +1,138 @@
+:root {
+    --cor-primaria: #0b77be;
+    --cor-secundaria: #db73d6;
+    --cor-destaque: #cb69e4;
+    --cor-fundo: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    min-height: 100vh;
+    background: var(--cor-fundo);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+/* Barra Lateral Esquerda */
+nav {
+    background: linear-gradient(160deg, var(--cor-primaria), #ffffff);
+    padding: 25px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* Barra Lateral Direita */
+aside {
+    background: linear-gradient(-160deg, var(--cor-secundaria), #73befc);
+    padding: 25px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+/* Estilos da Navegação */
+.menu-lateral {
+    list-style: none;
+}
+
+.menu-lateral li {
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.menu-lateral a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateX(10px);
+}
+
+/* Container da Imagem */
+.container-imagem {
+    position: relative;
+    margin: 30px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.container-imagem img {
+    width: 100%;
+    display: block;
+    border: 3px solid var(--cor-destaque);
+}
+
+.legenda-imagem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Tipografia */
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255,230,109,0.4);
+}
+
+h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.destaque-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+
+.destaque-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(78,205,196,0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    
+    nav, aside {
+        display: none;
+    }
+
+    main {
+        padding: 25px;
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Jogo do Molusco</title>
+</head>
+<body>
+    <header>
+        <h1>🎮 Jogo do Molusco</h1>
+    </header>
+    <main>
+        <div id="game-container">
+            <p>Bem-vindo ao Jogo do Molusco! Tente adivinhar um número entre 1 e 10.</p>
+            <input type="number" id="guess" min="1" max="10" placeholder="Digite seu palpite">
+            <button id="check-guess">Verificar Palpite</button>
+            <p id="message"></p>
+            <img id="win-image" src="win-image.jpeg" alt="Você venceu!" style="display: none; margin-top: 20px;">
+            <p id="attempts"></p> <!-- Para mostrar o número de tentativas restantes -->
+        </div>
+    </main>
+    <script src="jogo.js"></script>
+</body>
+</html>
